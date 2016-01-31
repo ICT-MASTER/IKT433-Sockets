@@ -95,7 +95,7 @@ public class Server extends Thread
 
                 else {
 
-                    out.println("getphone name lastname OR getmail name lastname");
+                    out.println("Commands\n* getphone [name | lastname]\n* getmail [name | lastname]");
 
                 }
 
@@ -128,8 +128,9 @@ public class Server extends Thread
 
         }
         catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Fy");
+            result = "No Data (ArrayIndexOutOfBoundsException)";
         } catch (SQLException e) {
+            result = "No Data (SQLException)";
             e.printStackTrace();
         }
         return result;
